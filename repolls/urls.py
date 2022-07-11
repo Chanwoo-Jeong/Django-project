@@ -4,7 +4,13 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.index, name='index'),
+   
     path('read/<id>/', views.read, name='read'),
-    path('randoms',views.randoms, name='randoms')
+    path('randoms',views.randoms, name='randoms'),
+
+
+    path('', views.index, name='index'),
+    path('<int:question_id>/', views.detail, name='detail'),
+    path('<int:question_id>/results', views.results, name='detail'),
+    path('<int:question_id>/vote', views.vote, name='detail'),
 ]

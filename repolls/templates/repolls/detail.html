@@ -1,0 +1,12 @@
+<h2>{{question.question_text}}</h2>
+
+{% if error_message %}<p>{{error_message}}</p>{% endif %}
+<form method="POST">
+{% csrf_token %}
+{% for choice in question.choice_set.all %}
+<!-- what is choice set all? -->
+<input type="radio"> {{choice.choice_text}} </br>
+
+{% endfor %}
+<input type="submit">
+</form>
