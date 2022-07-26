@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'lifecoding.apps.LifecodingConfig',
+    'rerepolls.apps.RerepollsConfig',
     'repolls.apps.RepollsConfig',
     'polls.apps.PollsConfig',
     'django.contrib.admin',

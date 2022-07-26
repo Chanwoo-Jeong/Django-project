@@ -1,0 +1,31 @@
+<html>
+<head>
+    <style>
+        .menu:visited {
+            color: black;
+            background-color: transparent;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<h1><a class="menu" href="{% url 'lifecoding:index' %}" style="text-decoration: none">Django</a></h1>
+<ol>
+    {% for dictionary in diclist %}
+        <a href="{% url 'lifecoding:read' dictionary.id %}">
+            <li>{{ dictionary }}</li>
+        </a>
+        {#        <a href="/lifecoding/read/{{ dictionary.id }}"><li>{{dictionary}}</li></a>#}
+    {% endfor %}
+</ol>
+{#<h1>{{ dicpa.title}}</h1>#}
+{#{{ dicpa.body }}#}
+{% include 'read.html' %}
+
+{% if  request.path  == '/lifecoding/create' %}
+    {% include 'create.html' %}
+{% endif %}
+
+<li style="margin-top: 1rem"><a href="{% url 'lifecoding:create' %}">Create</a></li>
+</body>
+</html>

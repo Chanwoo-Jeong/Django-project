@@ -1,0 +1,5 @@
+<h1>hello im index.html</h1>
+
+{% for question in question %}
+<li><a href="/rerepolls/{{question.id}}"> {{question.question_text}}</li>    
+{% endfor %}

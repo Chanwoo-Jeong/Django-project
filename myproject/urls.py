@@ -27,6 +27,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('myapp.urls')),
     path('polls/', include('polls.urls')),
-    path('repolls/',include('repolls.urls'))
-    
+    path('repolls/',include('repolls.urls')),
+    path('rerepolls/',include('rerepolls.urls')), 
+    path('lifecoding/',include('lifecoding.urls')), 
 ]

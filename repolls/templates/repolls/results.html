@@ -1,0 +1,7 @@
+{% for choice in question.choice_set.all %}
+<!-- what is choice set all? -->
+
+<li> {{choice.choice_text}} - {{choice.votes}} </li>
+
+{% endfor %}
+<a href="/repolls/{{question.id}}">vote again?</a>
